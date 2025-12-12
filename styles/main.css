@@ -201,6 +201,7 @@ a[href^="mailto:"]:hover
     align-items: center;
     height: 40vh;
     width: 50vw;
+    margin: 0 auto;
     text-align: center;
     background-color: #04214b;
     border-radius: 25px;
