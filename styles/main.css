@@ -145,7 +145,7 @@ main
 {
     border: 5px solid #fff;
     display: block;
-    width: 100%;
+    width: 75%;
     text-align: center;
 }
 
@@ -170,6 +170,39 @@ main
 .project-item-main p
 {
     padding-top: 10px;
+}
+
+/* about me page */
+
+a[href^="mailto:"]
+{
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+}
+
+a[href^="mailto:"]:hover
+{
+    text-decoration: none;
+    color: #021128;
+}
+
+/* contact page */
+
+.contact-form-button
+{
+    display: inline-block;
+    background-color: #fff;
+    color: #021128;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-form-button:hover
+{
+    background-color: #021128;
+    color: #fff;
 }
 
 /* footer */
