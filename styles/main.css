@@ -10,7 +10,7 @@
 
 body
 {
-    background-color: #1e3352;
+    background-color: #021128;
     font-family: 'Inter', sans-serif;
 }
 
@@ -95,7 +95,10 @@ nav a
     display: block;
     color: #fff;
     padding: 14px 16px;
+    border-radius: 15px;
     text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+
 }
 
 nav a:hover
@@ -113,6 +116,7 @@ aside
     color: #fff;
     float: left;
     margin: 0 1.2%;
+    margin-top: 20px;
     flex: 1 0 28%;
 }
 
@@ -138,6 +142,7 @@ main
     color: #fff;
     float: left;
     margin: 0 1.2%;
+    margin-top: 20px;
     flex: 1 0 60%;
 }
 
@@ -188,6 +193,21 @@ a[href^="mailto:"]:hover
 
 /* contact page */
 
+.contact-section
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    width: 50vw;
+    text-align: center;
+    background-color: #04214b;
+    border-radius: 25px;
+    color: #fff;
+    padding: 20px;
+}
+
 .contact-form-button
 {
     display: inline-block;
@@ -197,6 +217,7 @@ a[href^="mailto:"]:hover
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .contact-form-button:hover
