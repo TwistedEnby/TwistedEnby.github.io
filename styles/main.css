@@ -225,7 +225,7 @@ width: 100%;
     color: #fff;
 }
 
-a[href^="mailto:"]
+/* a[href^="mailto:"]
 {
     font-family: 'Inter', sans-serif;
     color: #fff;
@@ -235,7 +235,7 @@ a[href^="mailto:"]:hover
 {
     text-decoration: none;
     color: #04214b;
-}
+} */
 
 .icons-contact
 {
