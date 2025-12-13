@@ -146,7 +146,9 @@ main
     flex: 1 0 60%;
 }
 
-.rogue-rat-main, .fizz-fusion-main, .pride-toronto-main
+/* portfolio page */
+
+.rogue-rat-main, .fizz-fusion-main, .pride-toronto-main, .moes-crab-shack-main, .culinary-tours-main, .futz-main, .jump-math-main, .noname-main
 {
     display: block;
     width: 75%;
@@ -156,10 +158,36 @@ main
 
 .projects-main
 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+@media (max-width: 1024px)
+{
+    .projects-main
+    {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+
+@media (max-width: 768px)
+{
+    .projects-main
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+@media (max-width: 480px)
+{
+    .projects-main
+    {
+        grid-template-columns: repeat(1fr);
+    }
+    
 }
 
 .project-item-main
@@ -168,7 +196,7 @@ main
     flex-direction: column;
     flex: 1;
     align-items: center;
-    padding: 30px;
+    padding: 15px;
     text-align: center;
 }
 
