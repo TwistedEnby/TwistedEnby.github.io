@@ -140,15 +140,12 @@ main
     border-radius: 25px;
     padding: 25px;
     color: #fff;
-    float: left;
     margin: 0 1.2%;
     margin-top: 20px;
     flex: 1 0 60%;
 }
 
-/* portfolio page */
-
-.rogue-rat-main, .fizz-fusion-main, .pride-toronto-main, .moes-crab-shack-main, .culinary-tours-main, .futz-main, .jump-math-main, .noname-main
+.rogue-rat-main, .fizz-fusion-main
 {
     display: block;
     width: 75%;
@@ -158,36 +155,10 @@ main
 
 .projects-main
 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
-}
-
-@media (max-width: 1024px)
-{
-    .projects-main
-    {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-}
-
-@media (max-width: 768px)
-{
-    .projects-main
-    {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-}
-
-@media (max-width: 480px)
-{
-    .projects-main
-    {
-        grid-template-columns: repeat(1fr);
-    }
-    
+    margin-top: 50px;
 }
 
 .project-item-main
@@ -198,11 +169,82 @@ main
     align-items: center;
     padding: 15px;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-item-main:hover
+{
+    transform: translateY(-6px);
 }
 
 .project-item-main p
 {
     padding-top: 10px;
+}
+
+/* portfolio page */
+
+.rogue-rat-portfolio, .fizz-fusion-portfolio, .pride-toronto-portfolio, .moes-crab-shack-portfolio, .culinary-tours-portfolio, .futz-portfolio, .jump-math-portfolio, .noname-portfolio
+{
+    display: block;
+    width: 75%;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.projects-portfolio
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.project-item-portfolio
+{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-item-portfolio:hover
+{
+    transform: translateY(-6px);
+}
+
+.project-item-portfolio p
+{
+    padding-top: 10px;
+}
+
+@media (max-width: 1024px)
+{
+    .projects-portfolio
+    {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+
+@media (max-width: 768px)
+{
+    .projects-portfolio
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+@media (max-width: 480px)
+{
+    .projects-portfolio
+    {
+        grid-template-columns: (1fr);
+    }
+    
 }
 
 /* about me page */
