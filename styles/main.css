@@ -47,6 +47,8 @@ p
 {
     line-height: 1.2;
     padding-bottom: 8px;
+    color: #fff;
+    padding-top: 8px;
 }
 
 /* all pages container */
@@ -141,7 +143,7 @@ main
     flex: 1 0 60%;
 }
 
-/* home page */
+/* index page */
 .rogue-rat-main, .fizz-fusion-main
 {
     display: block;
@@ -208,7 +210,7 @@ main
     color: #fff;
 }
 
-/* skills list */
+/* skills list section */
 .skills-list
 {
     max-width: 500px;
@@ -260,6 +262,71 @@ main
     color: #04214b;
 }
 
+/* design process section */
+.design-process-section h3
+{
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: #fff;
+    padding-left: 40px;
+    padding-top: 40px;
+}
+
+.process-description
+{
+    max-width: 800px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+    color: #fff;
+    line-height: 1.6;
+    text-align: center;
+    font-size: 1rem;
+    opacity: 0.85;
+}
+
+
+.design-process
+{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.process-list
+{
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    gap: 70px;
+    font-weight: 500;
+}
+
+.process-list li
+{
+    padding: 20px 30px;
+    border-radius: 999px;
+    background: #99a2ff50;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #fff;
+}
+
+.process-list li::after
+{
+    content: "→";
+    margin-left: 30px;
+    opacity: 0.7;
+}
+
+.process-list li:last-child::after
+{
+    content: none;
+}
 
 /* portfolio page */
 .rogue-rat-portfolio, .fizz-fusion-portfolio, .pride-toronto-portfolio, .moes-crab-shack-portfolio, .culinary-tours-portfolio, .futz-portfolio, .jump-math-portfolio, .noname-portfolio
