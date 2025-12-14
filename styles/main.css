@@ -6,14 +6,15 @@
     box-sizing: border-box;
 }
 
-/* text design */
-
+/* website body */
 body
 {
     background-color: #021128;
     font-family: 'Inter', sans-serif;
+    height: 100%
 }
 
+/* text design */
 h1
 {
     font-size: 36px;
@@ -49,7 +50,6 @@ p
 }
 
 /* all pages container */
-
 .container
 {
     background-color: #021128;
@@ -62,7 +62,6 @@ p
 }
 
 /* header */
-
 header
 {
     background-color: #021128;
@@ -73,8 +72,7 @@ header
     flex: 1 0 100%;
 }
 
-/* navigation */
-
+/* navigation bar */
 nav
 {
     flex: 1 0 100%;
@@ -106,8 +104,7 @@ nav a:hover
     background-color: #062145;
 }
 
-/* sidebar */
-
+/* sidebar content */
 aside
 {
     background-color: #04214b;
@@ -133,7 +130,6 @@ aside
 }
 
 /* main content */
-
 main
 {
     background-color: #04214b;
@@ -145,6 +141,7 @@ main
     flex: 1 0 60%;
 }
 
+/* home page */
 .rogue-rat-main, .fizz-fusion-main
 {
     display: block;
@@ -182,8 +179,74 @@ main
     padding-top: 10px;
 }
 
-/* portfolio page */
+/* about me page */
 
+.about-content
+{
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.child-alex
+{
+    border-radius: 15px;
+    width: 300px;
+}
+
+.skills-list
+{
+    max-width: 500px;
+}
+
+.skill-item
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #ffffff50;
+}
+
+.skill-name
+{
+    font-weight: 500;
+}
+
+.skill-level
+{
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.intermediate
+{
+    background: #9affae;
+    color: #04214b;
+}
+
+.advanced
+{
+    background: #48d8fc;
+    color: #04214b;
+}
+
+.comfortable
+{
+    background: #fef887;
+    color: #04214b;
+}
+
+.familiar
+{
+    background: #f39867;
+    color: #04214b;
+}
+
+
+/* portfolio page */
 .rogue-rat-portfolio, .fizz-fusion-portfolio, .pride-toronto-portfolio, .moes-crab-shack-portfolio, .culinary-tours-portfolio, .futz-portfolio, .jump-math-portfolio, .noname-portfolio
 {
     display: block;
@@ -247,18 +310,16 @@ main
     
 }
 
-/* about me page */
-
 /* contact page */
-
 .contact-container
 {
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 24px;
-color: #fff;
-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 20px;
+    color: #fff;
+    width: 100%;
 }
 
 .contact-section
@@ -327,7 +388,6 @@ a[href^="mailto:"]:hover
 }
 
 /* footer */
-
 footer
 {
     background-color: #021128;
