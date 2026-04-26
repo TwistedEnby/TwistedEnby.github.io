@@ -437,3 +437,152 @@ footer{
 .window-content::-webkit-scrollbar-thumb:hover{
     background: #ffd471;
 }
+
+/* responsive for various mobile devices */
+ 
+@media (max-width: 768px) {
+ 
+    .nav-toggle {
+        display: flex;
+    }
+ 
+    .nav-container {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0 1rem;
+    }
+ 
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        background-color: #131313;
+        border-top: 1px solid #ffbd23;
+        margin-top: 0.5rem;
+    }
+ 
+    nav ul.nav-open {
+        display: flex;
+    }
+ 
+    nav ul li {
+        border-bottom: 1px solid #222;
+    }
+ 
+    nav ul li a {
+        display: block;
+        padding: 0.75rem 1rem;
+    }
+ 
+    nav a:hover {
+        box-shadow: none;
+        color: #ffbd23;
+    }
+ 
+    /* Hero */
+    .hero {
+        padding: 2.5rem 0;
+    }
+ 
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+ 
+    .hero p {
+        font-size: 1.1rem;
+    }
+ 
+    .hero-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    .cta-button {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+ 
+    /* About */
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    .about-image {
+        width: 100%;
+        max-width: 300px;
+        height: 260px;
+    }
+ 
+    .about h2,
+    .about h3 {
+        font-size: 1.8rem;
+    }
+ 
+    .about-text p {
+        font-size: 1rem;
+    }
+ 
+    /* Portfolio */
+    .projects {
+        grid-template-columns: 1fr;
+    }
+ 
+    /* Draggable windows */
+    .draggable-window {
+        min-width: unset;
+        max-width: 100%;
+        width: 95vw !important;
+        height: 80vh !important;
+        left: 2.5vw !important;
+        top: 10vh !important;
+    }
+ 
+    .window-title-bar {
+        cursor: default;
+    }
+ 
+    /* Footer */
+    footer {
+        padding: 0.6rem 0;
+    }
+ 
+    .social-links {
+        gap: 1.25rem;
+        margin-bottom: 0.25rem;
+    }
+ 
+    .social-links a {
+        font-size: 1.25rem;
+    }
+ 
+    footer p {
+        font-size: 0.8rem;
+    }
+ 
+    body {
+        padding-bottom: 5rem;
+    }
+}
+ 
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+ 
+    .about h2,
+    .portfolio h2,
+    .contact h2 {
+        font-size: 1.6rem;
+    }
+ 
+    .window-content h2 {
+        font-size: 1.6rem;
+    }
+ 
+    .window-content h3 {
+        font-size: 1.2rem;
+    }
+}
