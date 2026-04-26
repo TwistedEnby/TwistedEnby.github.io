@@ -2,75 +2,72 @@
 <html lang="en">
     
     <head>
-
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Google Fonts -->
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Frijole&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Mouse+Memoirs&display=swap" rel="stylesheet">
 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
         <link href="styles/main.css" rel="stylesheet">
-            
-        <title>Alex Parise - Contact</title>
 
+        <title>Alex's Archive</title>
+        <link rel="icon" type="image/x-icon" href="images/self-pictures/favicon.svg">
     </head>
 
     <body>
-
-        <div class="container">
-            
-                <header>
+        <header>
+            <nav>
+                <div class="nav-container">
                     <h1>Twisted Visuals</h1>
-                </header>
-
-                <nav>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
-                </nav>
-            
-            <div class="contact-container"> 
-                <div class="contact-section">
-                    <h1>WEBSITE UNDER CONSTRUCTION</h1>
-                    <p>Feel Free to Still Get in Touch (even though it's not quite ready yet!)</p>
-                    <a href="https://forms.gle/wwHcf2h7iuetu2VE6" target="_blank" class="contact-form-button">Send me a Google Form!</a>
                 </div>
-
-                <p class="alt-contact"> Prefer email? <a href="mailto:TwistedEnby@gmail.com">TwistedEnby@gmail.com</a></p>
-
-                <p>Or find me here!</p>
-
-                <div class="icons-contact">
-                    <div class="icons-item-contact">
-                        <a href="https://www.instagram.com/twistedvisuals.svg" target="_blank" aria-label="Instagram">
-                            <img src="images/instagram-icon.svg" alt="Instagram Icon" class="instagram-icon">
-                        </a>
-                    </div>
-                    <div class="icons-item-contact">
-                        <a href="https://www.behance.net/TwistedEnby" target="_blank" aria-label="Behance">
-                            <img src="images/behance-icon.svg" alt="Behance Icon" class="behance-icon">
-                        </a>
-                    </div>
-                    <div class="icons-item-contact">
-                        <a href="https://www.linkedin.com/in/alex-parise/" target="_blank" aria-label="LinkedIn">
-                            <img src="images/linkedin-icon.svg" alt="LinkedIn Icon" class="linkedin-icon">
-                        </a>
+            </nav>
+        </header>
+        <main>
+            <section class="contact">
+                <h2 class="text-start">Contact Me</h2>
+                <div class="row">
+                    <div class="col-md-6 text-start">
+                        <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="6ad6f2d3-1f23-462e-b979-1ace309557c6">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" name="name" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea name="message" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-yellow">Submit</button>
+                        </form>
                     </div>
                 </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/twistedvisuals.svg" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/alex-parise" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.behance.net/TwistedEnby" target="_blank" aria-label="Behance"><i class="bi bi-behance"></i></a>
+                </div>
+                <p>&copy; 2026 Alex Parise. All rights reserved.</p>
             </div>
+        </footer>
 
-            <footer>
-                <p>&copy; Copyright 2025 Alex Parise. All rights reserved.</p>
-            </footer>
-
-        </div>
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="scripts/main.js"></script>
     </body>
-    
 </html>

@@ -1,0 +1,185 @@
+<style>
+  .project-popup-content {
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+  }
+
+  .project-popup-content h2 {
+    color: #ffbd23;
+    margin-bottom: 1rem;
+  }
+
+  .project-popup-content h3 {
+    margin: 1.25rem 0 0.75rem;
+    color: #fff;
+  }
+
+  .project-popup-content p {
+    margin-bottom: 1rem;
+  }
+
+  .project-popup-content ul {
+    margin: 0 0 1rem 1.25rem;
+  }
+
+  .project-popup-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .fizz-fusion-carousel {
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #0f0f0f;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  .fizz-fusion-carousel .carousel-item {
+    display: none;
+    height: min(70vh, 600px);
+    background: #111;
+  }
+
+  .fizz-fusion-carousel .carousel-item.active {
+    display: block;
+  }
+
+  .fizz-fusion-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .fizz-fusion-carousel .carousel-caption {
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .fizz-fusion-carousel .carousel-control-prev,
+  .fizz-fusion-carousel .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .fizz-fusion-carousel .carousel-control-prev {
+    left: 12px;
+  }
+
+  .fizz-fusion-carousel .carousel-control-next {
+    right: 12px;
+  }
+
+  .fizz-fusion-carousel .carousel-control-prev:hover,
+  .fizz-fusion-carousel .carousel-control-next:hover {
+    background: rgba(255, 189, 35, 0.95);
+    color: #131313;
+  }
+</style>
+
+<div class="project-popup-content">
+  <h2>Fizz Fusion Brand Design</h2>
+  <p><strong>Tools:</strong> Illustrator, Photoshop</p>
+  <p><strong>Year:</strong> 2024</p>
+
+  <h3>Project Overview</h3>
+  <p>Fizz Fusion is a vibrant beverage brand that needed a complete brand identity. The project included logo design, color palette development, and brand guidelines.</p>
+
+  <h3>Deliverables</h3>
+  <ul>
+    <li>Logo Design</li>
+    <li>Packaging Concepts</li>
+    <li>Advertisement Templates</li>
+  </ul>
+
+  <div id="fizzFusionCarousel" class="carousel slide fizz-fusion-carousel" data-bs-ride="carousel" data-bs-interval="4000">
+    <div class="carousel-inner">
+      <div class="carousel-item active"><img src="../images/fizz-fusion-brand-design/fizz-fusion-logo.png" alt="Fizz Fusion Logo"></div>
+      <div class="carousel-item"><img src="../images/fizz-fusion-brand-design/fizz-fusion-label-green-apple.jpg" alt="Fizz Fusion Green Apple Label"></div>
+      <div class="carousel-item"><img src="../images/fizz-fusion-brand-design/fizz-fusion-label-cherry.jpg" alt="Fizz Fusion Cherry Label"></div>
+      <div class="carousel-item"><img src="../images/fizz-fusion-brand-design/fizz-fusion-label-orange.jpg" alt="Fizz Fusion Orange Label"></div>
+      <div class="carousel-item"><img src="../images/fizz-fusion-brand-design/fizz-fusion-label-blue-raspberry.jpg" alt="Fizz Fusion Blue Raspberry Label"></div>
+      <div class="carousel-item"><img src="../images/fizz-fusion-brand-design/fizz-fusion-label-grape.jpg" alt="Fizz Fusion Grape Label"></div>
+      <div class="carousel-item"><img src="../images/fizz-fusion-brand-design/fizz-fusion-label-peach.jpg" alt="Fizz Fusion Peach Label"></div>
+      <div class="carousel-item"><img src="../images/fizz-fusion-brand-design/fizz-fusion-advertisement.jpg" alt="Fizz Fusion Advertisement"></div>
+    </div>
+    <button class="carousel-control-prev" type="button" aria-label="Previous photo">&#10094;</button>
+    <button class="carousel-control-next" type="button" aria-label="Next photo">&#10095;</button>
+  </div>
+
+  <h3>Disclaimer</h3>
+  <p>Fizz Fusion is a fictional brand created for demonstration purposes only, this project was also completed as a portfolio piece in high school.</p>
+
+</div>
+
+<script>
+  (function () {
+    function initFizzFusionCarousel() {
+      const carousels = document.querySelectorAll('.fizz-fusion-carousel');
+      carousels.forEach((carousel) => {
+        if (carousel.dataset.carouselReady === 'true') return;
+        carousel.dataset.carouselReady = 'true';
+
+        const slides = Array.from(carousel.querySelectorAll('.carousel-item'));
+        if (slides.length === 0) return;
+
+        let activeIndex = slides.findIndex((slide) => slide.classList.contains('active'));
+        if (activeIndex < 0) activeIndex = 0;
+
+        const showSlide = (nextIndex) => {
+          slides[activeIndex].classList.remove('active');
+          activeIndex = (nextIndex + slides.length) % slides.length;
+          slides[activeIndex].classList.add('active');
+        };
+
+        const prevButton = carousel.querySelector('.carousel-control-prev');
+        const nextButton = carousel.querySelector('.carousel-control-next');
+
+        if (prevButton) {
+          prevButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            showSlide(activeIndex - 1);
+          });
+        }
+
+        if (nextButton) {
+          nextButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            showSlide(activeIndex + 1);
+          });
+        }
+
+        const intervalMs = parseInt(carousel.dataset.bsInterval, 10);
+        const autoAdvanceMs = Number.isNaN(intervalMs) ? 4000 : intervalMs;
+        if (autoAdvanceMs > 0) {
+          setInterval(() => {
+            showSlide(activeIndex + 1);
+          }, autoAdvanceMs);
+        }
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initFizzFusionCarousel);
+    } else {
+      initFizzFusionCarousel();
+    }
+  })();
+</script>

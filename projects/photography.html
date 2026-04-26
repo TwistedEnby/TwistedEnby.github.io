@@ -1,0 +1,198 @@
+<style>
+  .project-popup-content {
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+  }
+
+  .project-popup-content h2 {
+    color: #ffbd23;
+    margin-bottom: 1rem;
+  }
+
+  .project-popup-content h3 {
+    margin: 1.25rem 0 0.75rem;
+    color: #fff;
+  }
+
+  .project-popup-content p {
+    margin-bottom: 1rem;
+  }
+
+  .project-popup-content ul {
+    margin: 0 0 1rem 1.25rem;
+  }
+
+  .project-popup-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .photography-carousel {
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #0f0f0f;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  .photography-carousel .carousel-item {
+    display: none;
+    height: min(70vh, 600px);
+    background: #111;
+  }
+
+  .photography-carousel .carousel-item.active {
+    display: block;
+  }
+
+  .photography-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .photography-carousel .carousel-caption {
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .photography-carousel .carousel-control-prev,
+  .photography-carousel .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .photography-carousel .carousel-control-prev {
+    left: 12px;
+  }
+
+  .photography-carousel .carousel-control-next {
+    right: 12px;
+  }
+
+  .photography-carousel .carousel-control-prev:hover,
+  .photography-carousel .carousel-control-next:hover {
+    background: rgba(255, 189, 35, 0.95);
+    color: #131313;
+  }
+</style>
+
+<div class="project-popup-content">
+  <h2>Photography</h2>
+  <p><strong>Tools:</strong> Photoshop, Lightroom, DSLR Camera (Pentax K100D Super), iPhone Camera</p>
+  <p><strong>Year:</strong> 2020-present</p>
+  <div id="photographyCarousel" class="carousel slide photography-carousel" data-bs-ride="carousel" data-bs-interval="4000">
+    <div class="carousel-inner">
+      <div class="carousel-item active"><img src="../images/photography/achillea-millefolium.jpg" alt="Achillea millefolium"></div>
+      <div class="carousel-item"><img src="../images/photography/ageratum.jpg" alt="Ageratum"></div>
+      <div class="carousel-item"><img src="../images/photography/black-eyed-susan.jpg" alt="Black-eyed Susan"></div>
+      <div class="carousel-item"><img src="../images/photography/black-jewel-tulip.jpg" alt="Black jewel tulip"></div>
+      <div class="carousel-item"><img src="../images/photography/bleeding-heart.jpg" alt="Bleeding heart flower"></div>
+      <div class="carousel-item"><img src="../images/photography/brunfelsia-pauciflora.jpg" alt="Brunfelsia pauciflora"></div>
+      <div class="carousel-item"><img src="../images/photography/celosia.jpg" alt="Celosia"></div>
+      <div class="carousel-item"><img src="../images/photography/cranesbill-geranium.jpg" alt="Cranesbill geranium"></div>
+      <div class="carousel-item"><img src="../images/photography/dahlia-coccinea.jpg" alt="Dahlia coccinea"></div>
+      <div class="carousel-item"><img src="../images/photography/dahlia-cornel-1.jpg" alt="Dahlia Cornel"></div>
+      <div class="carousel-item"><img src="../images/photography/dahlia-cornel-2.jpg" alt="Dahlia Cornel close-up"></div>
+      <div class="carousel-item"><img src="../images/photography/dahlia-pinnata.jpg" alt="Dahlia pinnata"></div>
+      <div class="carousel-item"><img src="../images/photography/eastern-lubber-grasshopper.jpg" alt="Eastern lubber grasshopper"></div>
+      <div class="carousel-item"><img src="../images/photography/forget-me-nots-1.jpg" alt="Forget me nots"></div>
+      <div class="carousel-item"><img src="../images/photography/forget-me-nots-2.jpg" alt="Forget me nots close-up"></div>
+      <div class="carousel-item"><img src="../images/photography/french-marigold.jpg" alt="French marigold"></div>
+      <div class="carousel-item"><img src="../images/photography/fungi.jpg" alt="Fungi"></div>
+      <div class="carousel-item"><img src="../images/photography/gaillardia-aristata.png" alt="Gaillardia aristata"></div>
+      <div class="carousel-item"><img src="../images/photography/gavota-triumph-tulip.jpg" alt="Gavota triumph tulip"></div>
+      <div class="carousel-item"><img src="../images/photography/impatiens-capensis.jpg" alt="Impatiens capensis"></div>
+      <div class="carousel-item"><img src="../images/photography/madagascar-hissing-cockroach.jpg" alt="Madagascar hissing cockroach"></div>
+      <div class="carousel-item"><img src="../images/photography/oyster-mushrooms-1.jpg" alt="Oyster mushrooms"></div>
+      <div class="carousel-item"><img src="../images/photography/oyster-mushrooms-2.jpg" alt="Oyster mushrooms cluster"></div>
+      <div class="carousel-item"><img src="../images/photography/oyster-mushrooms-3.jpg" alt="Oyster mushrooms close-up"></div>
+      <div class="carousel-item"><img src="../images/photography/orange-chrysanthemum.jpg" alt="Orange chrysanthemum"></div>
+      <div class="carousel-item"><img src="../images/photography/pink-chrysanthemum.jpg" alt="Pink chrysanthemum"></div>
+      <div class="carousel-item"><img src="../images/photography/polygonatum-biflorum.jpg" alt="Polygonatum biflorum"></div>
+      <div class="carousel-item"><img src="../images/photography/rubus-odoratus.jpg" alt="Rubus odoratus"></div>
+      <div class="carousel-item"><img src="../images/photography/solidago-canadensis.jpg" alt="Solidago canadensis"></div>
+      <div class="carousel-item"><img src="../images/photography/sunflower.jpg" alt="Sunflower"></div>
+      <div class="carousel-item"><img src="../images/photography/wax-begonias.jpg" alt="Wax begonias"></div>
+      <div class="carousel-item"><img src="../images/photography/white-chrysanthemum.jpg" alt="White chrysanthemum"></div>
+      <div class="carousel-item"><img src="../images/photography/yellow-chrysanthemum-1.png" alt="Yellow chrysanthemum"></div>
+      <div class="carousel-item"><img src="../images/photography/yellow-chrysanthemum-2.jpg" alt="Yellow chrysanthemum close-up"></div>
+      <div class="carousel-item"><img src="../images/photography/zinnia-elegans-1.jpg" alt="Zinnia elegans"></div>
+      <div class="carousel-item"><img src="../images/photography/zinnia-elegans-2.jpg" alt="Zinnia elegans close-up"></div>
+    </div>
+    <button class="carousel-control-prev" type="button" aria-label="Previous photo">&#10094;</button>
+    <button class="carousel-control-next" type="button" aria-label="Next photo">&#10095;</button>
+  </div>
+</div>
+
+<script>
+  (function () {
+    function initPhotographyCarousel() {
+      const carousels = document.querySelectorAll('.photography-carousel');
+      carousels.forEach((carousel) => {
+        if (carousel.dataset.carouselReady === 'true') return;
+        carousel.dataset.carouselReady = 'true';
+
+        const slides = Array.from(carousel.querySelectorAll('.carousel-item'));
+        if (slides.length === 0) return;
+
+        let activeIndex = slides.findIndex((slide) => slide.classList.contains('active'));
+        if (activeIndex < 0) activeIndex = 0;
+
+        const showSlide = (nextIndex) => {
+          slides[activeIndex].classList.remove('active');
+          activeIndex = (nextIndex + slides.length) % slides.length;
+          slides[activeIndex].classList.add('active');
+        };
+
+        const prevButton = carousel.querySelector('.carousel-control-prev');
+        const nextButton = carousel.querySelector('.carousel-control-next');
+
+        if (prevButton) {
+          prevButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            showSlide(activeIndex - 1);
+          });
+        }
+
+        if (nextButton) {
+          nextButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            showSlide(activeIndex + 1);
+          });
+        }
+
+        const intervalMs = parseInt(carousel.dataset.bsInterval, 10);
+        const autoAdvanceMs = Number.isNaN(intervalMs) ? 4000 : intervalMs;
+        if (autoAdvanceMs > 0) {
+          setInterval(() => {
+            showSlide(activeIndex + 1);
+          }, autoAdvanceMs);
+        }
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPhotographyCarousel);
+    } else {
+      initPhotographyCarousel();
+    }
+  })();
+</script>

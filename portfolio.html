@@ -2,50 +2,118 @@
 <html lang="en">
     
     <head>
-
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Google Fonts -->
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Frijole&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Mouse+Memoirs&display=swap" rel="stylesheet">
 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
         <link href="styles/main.css" rel="stylesheet">
-            
-        <title>Alex Parise - Portfolio</title>
+
+        <title>Alex's Archive</title>
+        <link rel="icon" type="image/x-icon" href="images/self-pictures/favicon.svg">
 
     </head>
 
     <body>
-
-        <div class="container">
-
-                <header>
+        <header>
+            <nav>
+                <div class="nav-container">
                     <h1>Twisted Visuals</h1>
-                </header>
-
-                <nav>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
-                </nav>
-
-                <div class="contact-section">
-                    <h1>WEBSITE UNDER CONSTRUCTION</h1>
                 </div>
+            </nav>
+        </header>
 
+        <main>
+            <section class="portfolio">
+                <h2>My Portfolio</h2>
+                <div class="projects">
 
-                <footer>
-                    <p>&copy; Copyright 2025 Alex Parise. All rights reserved.</p>
-                </footer>
+                    <div class="project" onclick="openProjectWindow('projects/fizz-fusion-brand-design.html')">
+                        <div class="project-image">
+                            <img src="images/fizz-fusion-brand-design/fizz-fusion-logo.png" alt="Fizz Fusion Brand Design">
+                        </div>
+                        <h3>Fizz Fusion Brand Design</h3>
+                        <ul class="tools">
+                            <li>Illustrator</li>
+                            <li>Photoshop</li>
+                        </ul>
+                        <p>Brand identity design for Fizz Fusion soda pop brand.</p>
+                    </div>
 
-        </div>
+                    <div class="project" onclick="openProjectWindow('projects/fizz-fusion-rebrand.html')">
+                        <div class="project-image">
+                            <img src="images/fizz-fusion-rebrand/fizz-fusion-rebrand.png" alt="Fizz Fusion Brand Re-Design">
+                        </div>
+                        <h3>Fizz Fusion Rebrand</h3>
+                        <ul class="tools">
+                            <li>Illustrator</li>
+                            <li>Photoshop</li>
+                        </ul>
+                        <p>Updated brand identity for Fizz Fusion soda pop brand.</p>
+                    </div>
 
+                    <div class="project" onclick="openProjectWindow('projects/rogue-rat-brand-design.html')">
+                        <div class="project-image">
+                            <img src="images/rogue-rat/rogue-rat-logo.png" alt="Rogue Rat Brand Design">
+                        </div>
+                        <h3>Rogue Rat Brand Design</h3>
+                        <ul class="tools">
+                            <li>Photoshop</li>
+                            <li>Illustrator</li>
+                            <li>InDesign</li>
+                        </ul>
+                        <p>Captured using a variety of equipment including a DSLR camera and iPhone camera.</p>
+                    </div>
+
+                    <div class="project" onclick="openProjectWindow('projects/thaw.html')">
+                        <div class="project-image">
+                            <img src="images/thaw/thaw-logo.PNG" alt="The House Always Wins Game UI Design">
+                        </div>
+                        <h3>The House Always Wins Game UI Design</h3>
+                        <ul class="tools">
+                            <li>Figma</li>
+                            <li>Illustrator</li>
+                        </ul>
+                        <p>User interface design for an indie game.</p>
+                    </div>
+
+                    <div class="project" onclick="openProjectWindow('projects/photography.html')">
+                        <div class="project-image">
+                            <img src="images/photography/brunfelsia-pauciflora.jpg" alt="Photography Portfolio">
+                        </div>
+                        <h3>Photography Showcase</h3>
+                        <ul class="tools">
+                            <li>Photoshop</li>
+                            <li>Lightroom</li>
+                        </ul>
+                        <p>Captured using a variety of equipment including a DSLR camera and iPhone camera.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/twistedvisuals.svg" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/alex-parise" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.behance.net/TwistedEnby" target="_blank" aria-label="Behance"><i class="bi bi-behance"></i></a>
+                </div>
+                <p>&copy; 2026 Alex Parise. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="scripts/main.js"></script>
     </body>
 
 </html>

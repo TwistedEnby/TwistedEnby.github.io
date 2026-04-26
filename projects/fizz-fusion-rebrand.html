@@ -1,0 +1,184 @@
+<style>
+  .project-popup-content {
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+  }
+
+  .project-popup-content h2 {
+    color: #ffbd23;
+    margin-bottom: 1rem;
+  }
+
+  .project-popup-content h3 {
+    margin: 1.25rem 0 0.75rem;
+    color: #fff;
+  }
+
+  .project-popup-content p {
+    margin-bottom: 1rem;
+  }
+
+  .project-popup-content ul {
+    margin: 0 0 1rem 1.25rem;
+  }
+
+  .project-popup-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .fizz-fusion-rebrand-carousel {
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #0f0f0f;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  .fizz-fusion-rebrand-carousel .carousel-item {
+    display: none;
+    height: min(70vh, 600px);
+    background: #111;
+  }
+
+  .fizz-fusion-rebrand-carousel .carousel-item.active {
+    display: block;
+  }
+
+  .fizz-fusion-rebrand-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .fizz-fusion-rebrand-carousel .carousel-control-prev,
+  .fizz-fusion-rebrand-carousel .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .fizz-fusion-rebrand-carousel .carousel-control-prev {
+    left: 12px;
+  }
+
+  .fizz-fusion-rebrand-carousel .carousel-control-next {
+    right: 12px;
+  }
+
+  .fizz-fusion-rebrand-carousel .carousel-control-prev:hover,
+  .fizz-fusion-rebrand-carousel .carousel-control-next:hover {
+    background: rgba(255, 189, 35, 0.95);
+    color: #131313;
+  }
+</style>
+
+<div class="project-popup-content">
+  <h2>Fizz Fusion Brand Re-Design</h2>
+  <p><strong>Tools:</strong> Illustrator, Photoshop</p>
+  <p><strong>Year:</strong> 2025</p>
+
+  <h3>Project Overview</h3>
+  <p>Following feedback and brand evolution, Fizz Fusion underwent a brand refresh. This modern redesign keeps brand recognition while increasing visual appeal.</p>
+
+  <h3>Updates Made</h3>
+  <ul>
+    <li>Refined Logo Mark</li>
+    <li>Enhanced Color Palette</li>
+    <li>Updated Typography System</li>
+    <li>Modern Pattern Elements</li>
+    <li>Refreshed Visual Language</li>
+  </ul>
+
+  <h3>Design Process</h3>
+  <p>While keeping the core brand identity, the redesign modernizes the visual approach with cleaner lines, improved scalability, and better function across digital and print media.</p>
+
+  <p>The new design system is more flexible, allowing for better adaptation to different product lines and marketing campaigns.</p>
+
+  <div id="fizzFusionRebrandCarousel" class="carousel slide fizz-fusion-rebrand-carousel" data-bs-ride="carousel" data-bs-interval="4000">
+    <div class="carousel-inner">
+      <div class="carousel-item active"><img src="../images/fizz-fusion-rebrand/fizz-fusion-rebrand.png" alt="Fizz Fusion Rebrand"></div>
+      <div class="carousel-item"><img src="../images/fizz-fusion-rebrand/brand-overview.png" alt="Fizz Fusion Brand Overview"></div>
+      <div class="carousel-item"><img src="../images/fizz-fusion-rebrand/visual-identity.png" alt="Fizz Fusion Visual Identity"></div>
+      <div class="carousel-item"><img src="../images/fizz-fusion-rebrand/wordmark-design.png" alt="Fizz Fusion Wordmark Design"></div>
+      <div class="carousel-item"><img src="../images/fizz-fusion-rebrand/type-in-use.png" alt="Fizz Fusion Type in Use"></div>
+      <div class="carousel-item"><img src="../images/fizz-fusion-rebrand/package-design.png" alt="Fizz Fusion Package Design"></div>
+      <div class="carousel-item"><img src="../images/fizz-fusion-rebrand/flavour-lineup.png" alt="Fizz Fusion Flavour Lineup"></div>
+    </div>
+    <button class="carousel-control-prev" type="button" aria-label="Previous photo">&#10094;</button>
+    <button class="carousel-control-next" type="button" aria-label="Next photo">&#10095;</button>
+  </div>
+
+  <h3>Disclaimer</h3>
+  <p>Fizz Fusion is a fictional brand created for demonstration purposes only, this project was also completed as a portfolio piece in high school.</p>
+</div>
+
+<script>
+  (function () {
+    function initFizzFusionRebrandCarousel() {
+      const carousels = document.querySelectorAll('.fizz-fusion-rebrand-carousel');
+      carousels.forEach((carousel) => {
+        if (carousel.dataset.carouselReady === 'true') return;
+        carousel.dataset.carouselReady = 'true';
+
+        const slides = Array.from(carousel.querySelectorAll('.carousel-item'));
+        if (slides.length === 0) return;
+
+        let activeIndex = slides.findIndex((slide) => slide.classList.contains('active'));
+        if (activeIndex < 0) activeIndex = 0;
+
+        const showSlide = (nextIndex) => {
+          slides[activeIndex].classList.remove('active');
+          activeIndex = (nextIndex + slides.length) % slides.length;
+          slides[activeIndex].classList.add('active');
+        };
+
+        const prevButton = carousel.querySelector('.carousel-control-prev');
+        const nextButton = carousel.querySelector('.carousel-control-next');
+
+        if (prevButton) {
+          prevButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            showSlide(activeIndex - 1);
+          });
+        }
+
+        if (nextButton) {
+          nextButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            showSlide(activeIndex + 1);
+          });
+        }
+
+        const intervalMs = parseInt(carousel.dataset.bsInterval, 10);
+        const autoAdvanceMs = Number.isNaN(intervalMs) ? 4000 : intervalMs;
+        if (autoAdvanceMs > 0) {
+          setInterval(() => {
+            showSlide(activeIndex + 1);
+          }, autoAdvanceMs);
+        }
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initFizzFusionRebrandCarousel);
+    } else {
+      initFizzFusionRebrandCarousel();
+    }
+  })();
+</script>
