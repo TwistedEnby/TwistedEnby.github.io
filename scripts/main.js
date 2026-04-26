@@ -1,3 +1,22 @@
+const toggle = document.querySelector('.nav-toggle');
+const navUl = document.querySelector('nav ul');
+ 
+if (toggle && navUl) {
+    toggle.addEventListener('click', () => {
+        navUl.classList.toggle('nav-open');
+        const isOpen = navUl.classList.contains('nav-open');
+        toggle.setAttribute('aria-expanded', isOpen);
+    });
+ 
+    // close nav when a link is clicked
+    navUl.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navUl.classList.remove('nav-open');
+            toggle.setAttribute('aria-expanded', false);
+        });
+    });
+}
+
 // loading project content (in seperate windows)
 async function loadProjectContent(filePath) {
     const response = await fetch(filePath);

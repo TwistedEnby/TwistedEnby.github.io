@@ -24,11 +24,11 @@ header{
 .nav-container{
     max-width: 100%;
     margin: 0 auto;
-    margin-right: 100px;
+    margin-right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
 }
 
 nav h1{
@@ -53,7 +53,6 @@ nav a:hover{
     border-top: 0px solid #ffbd23;
     box-shadow: 0 -3px 0 #ffbd23;
     transition: box-shadow 0.3s, color 0.3s;
-
 }
 
 header h1{
@@ -63,19 +62,39 @@ header h1{
     margin: 0;
 }
 
-nav ul{
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-
 nav a{
     color: #fff;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
     border-top: 0px solid #ffd471;
+}
 
+/* hamburger button */
+.nav-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #ffbd23;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* hide hamburger on desktop */
+@media (min-width: 769px) {
+    .nav-toggle {
+        display: none !important;
+    }
 }
 
 /* main content */
@@ -225,7 +244,7 @@ main{
 
 .projects{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
 
@@ -438,20 +457,17 @@ footer{
     background: #ffd471;
 }
 
-/* responsive for various mobile devices */
- 
+/* responsive on other devices */
+
 @media (max-width: 768px) {
- 
-    .nav-toggle {
-        display: flex;
-    }
- 
+
+    /* Nav */
     .nav-container {
         flex-wrap: wrap;
         gap: 0.5rem;
         padding: 0 1rem;
     }
- 
+
     nav ul {
         display: none;
         flex-direction: column;
@@ -461,75 +477,82 @@ footer{
         border-top: 1px solid #ffbd23;
         margin-top: 0.5rem;
     }
- 
+
     nav ul.nav-open {
         display: flex;
     }
- 
+
     nav ul li {
         border-bottom: 1px solid #222;
     }
- 
+
     nav ul li a {
         display: block;
         padding: 0.75rem 1rem;
     }
- 
+
     nav a:hover {
         box-shadow: none;
         color: #ffbd23;
     }
- 
+
     /* Hero */
     .hero {
         padding: 2.5rem 0;
     }
- 
+
     .hero h2 {
         font-size: 2.2rem;
     }
- 
+
     .hero p {
         font-size: 1.1rem;
     }
- 
+
     .hero-nav {
         flex-direction: column;
         align-items: center;
     }
- 
+
     .cta-button {
         width: 100%;
         max-width: 280px;
         text-align: center;
     }
- 
+
     /* About */
     .about-content {
         flex-direction: column;
         align-items: center;
     }
- 
+
     .about-image {
         width: 100%;
         max-width: 300px;
         height: 260px;
     }
- 
+
     .about h2,
     .about h3 {
         font-size: 1.8rem;
     }
- 
+
     .about-text p {
         font-size: 1rem;
     }
- 
+
     /* Portfolio */
     .projects {
         grid-template-columns: 1fr;
     }
- 
+
+    /* Contact */
+    .contact .col-md-6 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+
     /* Draggable windows */
     .draggable-window {
         min-width: unset;
@@ -539,49 +562,49 @@ footer{
         left: 2.5vw !important;
         top: 10vh !important;
     }
- 
+
     .window-title-bar {
         cursor: default;
     }
- 
+
     /* Footer */
     footer {
         padding: 0.6rem 0;
     }
- 
+
     .social-links {
         gap: 1.25rem;
         margin-bottom: 0.25rem;
     }
- 
+
     .social-links a {
         font-size: 1.25rem;
     }
- 
+
     footer p {
         font-size: 0.8rem;
     }
- 
+
     body {
         padding-bottom: 5rem;
     }
 }
- 
+
 @media (max-width: 480px) {
     .hero h2 {
         font-size: 1.8rem;
     }
- 
+
     .about h2,
     .portfolio h2,
     .contact h2 {
         font-size: 1.6rem;
     }
- 
+
     .window-content h2 {
         font-size: 1.6rem;
     }
- 
+
     .window-content h3 {
         font-size: 1.2rem;
     }
